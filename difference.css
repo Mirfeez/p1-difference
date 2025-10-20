@@ -1,0 +1,53 @@
+body {
+  background-color: black;
+  color: white;
+}
+header{
+  width: 100vw;
+  height: 3rem;
+  background-color: transparent;
+  margin-top: -1rem;
+  margin-left: -0.3rem;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.name:hover{
+  color: #73ff00;
+  text-shadow:0 0 5px #73ff00;
+  cursor: pointer;
+}
+
+.enter{
+  width: 100px;
+  height: 30px;
+  background-color: #73ff00;
+}
+
+.ageinput{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.agedifference,
+.age{
+  border-bottom: 4px solid #73ff00;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+table{
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+  th, td {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+h2{
+  color: #73ff00;
+}

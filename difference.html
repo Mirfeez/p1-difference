@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Difference</title>
+  <link rel="stylesheet" href="difference.css">
+  <script src="difference.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1 class="name">Mirfeez</h1>
+    </nav>
+  </header>
+
+  <main>
+    <section class="age">
+      <h2>How old are You:</h2>
+      <div class="ageinput">
+        <label for="enter-age">Enter Your Date of Birth</label>
+        <input type="datetime-local" id="enter-age" placeholder="yyyy-mm-dd hh:mm:ss">
+      </div>
+      <button class="enter" onclick="calculateAge()" id="enter">Enter</button>
+
+      <div class="table">
+        <h3>Difference</h3>
+        <table>
+          <tr>
+            <th>Years</th>
+            <th>Months</th>
+            <th>Days</th>
+            <th>Hours</th>
+            <th>Minutes</th>
+            <th>Seconds</th>
+          </tr>
+          <tr>
+            <td id="years"></td>
+            <td id="months"></td>
+            <td id="days"></td>
+            <td id="hours"></td>
+            <td id="minutes"></td>
+            <td id="seconds"></td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="dtable">
+        <h3>Difference in each</h3>
+        <table>
+          <tr>
+            <th>Years</th>
+            <td id="dyears"></td>
+          </tr>
+          <tr>
+            <th>Months</th>
+            <td id="dmonths"></td>
+          </tr>
+          <tr>
+            <th>Days</th>
+            <td id="ddays"></td>
+          </tr>
+          <tr>
+            <th>Hours</th>
+            <td id="dhours"></td>
+          </tr>
+          <tr>
+            <th>Minutes</th>
+            <td id="dminutes"></td>
+          </tr>
+          <tr>
+            <th>Seconds</th>
+            <td id="dseconds"></td>
+          </tr>
+
+        </table>
+      </div>
+    </section>
+
+
+    <section class="agedifference">
+
+      <h2>Age difference between two dates:</h2>
+      <div class="p1">
+        <label for="player1input">Enter age of Player 1</label>
+        <input id="player1input" type="datetime-local" placeholder="yyyy-mm-dd hh:mm:ss">
+      </div>
+
+      <br>
+      <div class="p2">
+        <label for="player2input">Enter age of Player 2</label>
+        <input id="player2input" type="datetime-local" placeholder="yyyy-mm-dd hh:mm:ss">
+      </div>
+      <button class="enter" onclick="ageDifference()" id="enter2">Enter</button>
+
+      <div class="table2">
+        <h3>Difference</h3>
+        <table>
+          <tr>
+            <th>Years</th>
+            <th>Months</th>
+            <th>Days</th>
+            <th>Hours</th>
+            <th>Minutes</th>
+            <th>Seconds</th>
+          </tr>
+          <tr>
+            <td id="years2"></td>
+            <td id="months2"></td>
+            <td id="days2"></td>
+            <td id="hours2"></td>
+            <td id="minutes2"></td>
+            <td id="seconds2"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="dtable2">
+        <h3>Difference in each</h3>
+        <table>
+          <tr>
+            <th>Years</th>
+            <td id="dyears2"></td>
+          </tr>
+          <tr>
+            <th>Months</th>
+            <td id="dmonths2"></td>
+          </tr>
+          <tr>
+            <th>Days</th>
+            <td id="ddays2"></td>
+          </tr>
+          <tr>
+            <th>Hours</th>
+            <td id="dhours2"></td>
+          </tr>
+          <tr>
+            <th>Minutes</th>
+            <td id="dminutes2"></td>
+          </tr>
+          <tr>
+            <th>Seconds</th>
+            <td id="dseconds2"></td>
+          </tr>
+
+        </table>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
