@@ -1,53 +1,156 @@
-body {
-  background-color: black;
-  color: white;
-}
-header{
-  width: 100vw;
-  height: 3rem;
-  background-color: transparent;
-  margin-top: -1rem;
-  margin-left: -0.3rem;
-  display: block;
-  justify-content: center;
-  align-items: center;
+:root {
+  --accent: #73ff00;
+  --bg: #000;
+  --fg: #fff;
+  --max-width: 1000px;
 }
 
-.name:hover{
-  color: #73ff00;
-  text-shadow:0 0 5px #73ff00;
+/* Mobile-first base */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue",
+    Arial;
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 1rem;
+}
+
+header {
+  max-width: var(--max-width);
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.name:hover {
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent);
   cursor: pointer;
 }
 
-.enter{
-  width: 100px;
-  height: 30px;
-  background-color: #73ff00;
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
 
-.ageinput{
-  margin-top: 20px;
-  margin-bottom: 15px;
+.age,
+.agedifference {
+  border-bottom: 4px solid var(--accent);
+  padding: 0.75rem 0.5rem;
 }
 
-.agedifference,
-.age{
-  border-bottom: 4px solid #73ff00;
-  margin-top: 20px;
-  padding-bottom: 10px;
+.age h2,
+.agedifference h2 {
+  color: var(--accent);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
 }
 
-table{
+.ageinput,
+.p1,
+.p2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 0.95rem;
+}
+
+input[type="datetime-local"] {
+  padding: 0.5rem;
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  width: 100%;
+}
+
+.enter {
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.table,
+.table2,
+.dtable,
+.dtable2 {
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
   border-collapse: collapse;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-  th, td {
-    border: 1px solid white;
-    padding: 10px;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
 }
 
-h2{
-  color: #73ff00;
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.5rem 0.6rem;
 }
+
+/* larger screens */
+@media (min-width: 700px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .age,
+  .agedifference {
+    padding: 1rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  main{
+    display: block;
+  }
+}
+
+@media (min-width: 1100px) {
+  :root {
+    --max-width: 1200px;
+  }
+  body {
+    padding: 2rem;
+  }
+  .enter {
+    padding: 0.6rem 1rem;
+  }
+}
+
+
