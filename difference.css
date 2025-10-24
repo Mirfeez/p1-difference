@@ -1,156 +1,101 @@
-:root {
-  --accent: #73ff00;
-  --bg: #000;
-  --fg: #fff;
-  --max-width: 1000px;
-}
-
-/* Mobile-first base */
-* {
-  box-sizing: border-box;
-}
-html,
 body {
-  height: 100%;
+  background-color: #1c0135;
+  height: 100vh;
+  width: 100vw;
+  color: white;
 }
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue",
-    Arial;
-  background-color: var(--bg);
-  color: var(--fg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding: 1rem;
-}
-
-header {
-  max-width: var(--max-width);
-  margin: 0 auto 1rem auto;
+.clock {
+  border-radius: 50%;
+  width: 28rem;
+  height: 28rem;
+  background-color: black;
+  justify-self: center;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  align-self: center;
+  margin-top: 7.5rem;
+  position: relative;
 }
 
-.name {
-  margin: 0;
-  font-size: 1.25rem;
-}
-.name:hover {
-  color: var(--accent);
-  text-shadow: 0 0 6px var(--accent);
-  cursor: pointer;
-}
+.nums {
+  position: absolute;
+  font-size: 3.5rem;
+  font-weight: bold;
+} 
 
-main {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
+.num1{
+  transform: translate(95px,-155px);
 }
-
-.age,
-.agedifference {
-  border-bottom: 4px solid var(--accent);
-  padding: 0.75rem 0.5rem;
+.num2{
+  transform: translate(150px,-95px);
 }
-
-.age h2,
-.agedifference h2 {
-  color: var(--accent);
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
+.num3{
+  transform: translate(180px,0);
 }
-
-.ageinput,
-.p1,
-.p2 {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.num4{
+  transform: translate(150px,95px);
 }
-
-label {
-  font-size: 0.95rem;
+.num5{
+  transform: translate(95px,155px);
 }
-
-input[type="datetime-local"] {
-  padding: 0.5rem;
-  background: transparent;
-  color: var(--fg);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
-  width: 100%;
+.num6{
+  transform: translate(0,180px);
+}
+.num7{
+  transform: translate(-95px,155px);
+}
+.num8{
+  transform: translate(-155px,95px);
+}
+.num9{
+  transform: translate(-180px,0);
+}
+.num10{
+  transform: translate(-155px,-95px);
+}
+.num11{
+  transform: translate(-95px,-155px);
+}
+.num12{
+  transform: translate(0,-180px);
 }
 
-.enter {
-  display: inline-block;
-  padding: 0.45rem 0.8rem;
-  background-color: var(--accent);
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 0.5rem;
+
+
+
+@property --deg {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
 }
 
-.table,
-.table2,
-.dtable,
-.dtable2 {
-  overflow-x: auto;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 0.5rem;
-  border-radius: 6px;
+.clock::before,
+.clock::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 28rem;
+  width: 28rem;
+  background: conic-gradient(
+    from var(--deg) at center,
+    #00c3ff,
+    #4d0199,
+    #6300c6,
+    #009dcd
+  );
+  border-radius: inherit;
+  z-index: -2;
+  padding: 2px;
+  animation: autoRotate 2s linear infinite;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  margin: 0.5rem 0;
-  font-size: 0.95rem;
+.clock::after {
+  filter: blur(10px);
 }
 
-th,
-td {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 0.5rem 0.6rem;
-}
-
-/* larger screens */
-@media (min-width: 700px) {
-  main {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
-
-  .age,
-  .agedifference {
-    padding: 1rem;
-  }
-
-  .name {
-    font-size: 1.5rem;
-  }
-
-  main{
-    display: block;
+@keyframes autoRotate {
+  to {
+    --deg: 360deg;
   }
 }
-
-@media (min-width: 1100px) {
-  :root {
-    --max-width: 1200px;
-  }
-  body {
-    padding: 2rem;
-  }
-  .enter {
-    padding: 0.6rem 1rem;
-  }
-}
-
-
