@@ -26,11 +26,11 @@ body {
 
 header {
   max-width: var(--max-width);
-  margin: 0 auto 1rem auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .name {
