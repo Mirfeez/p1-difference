@@ -90,7 +90,7 @@ input[type="datetime-local"] {
   padding: 0.45rem 0.8rem;
   background-color: var(--accent);
   color: #000;
-  border: none;
+  border: 3px solid black;
   border-radius: 6px;
   cursor: pointer;
   margin-top: 0.5rem;
@@ -151,6 +151,14 @@ td {
   .enter {
     padding: 0.6rem 1rem;
   }
+}
+
+
+button:hover{
+  color: #73ff00;
+  background-color: black;
+  border:3px solid #73ff00;
+  box-shadow: 0 0 10px #73ff00;
 }
 
 
