@@ -35,12 +35,20 @@ header {
 
 .name {
   margin: 0;
-  font-size: 1.25rem;
+  color: white;
+  text-decoration-line: none;
 }
+
+h3{
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
 .name:hover {
   color: var(--accent);
   text-shadow: 0 0 6px var(--accent);
   cursor: pointer;
+  transform: ;
 }
 
 main {
