@@ -43,12 +43,15 @@ h3{
   font-size: 2rem;
   margin-left: 1rem;
 }
+h3:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
 
 .name:hover {
   color: var(--accent);
   text-shadow: 0 0 6px var(--accent);
   cursor: pointer;
-  transform: ;
 }
 
 main {
