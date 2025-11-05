@@ -41,7 +41,7 @@ header {
 
 h3{
   font-size: 2rem;
-  margin-left: 1rem;
+  margin: 0;
 }
 h3:hover{
   transform: scale(1.1);
