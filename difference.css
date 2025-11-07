@@ -30,7 +30,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .name {
@@ -39,11 +39,11 @@ header {
   text-decoration-line: none;
 }
 
-h3{
+h3 {
   font-size: 2rem;
   margin: 0;
 }
-h3:hover{
+h3:hover {
   transform: scale(1.1);
   transition: transform 0.3s;
 }
@@ -143,13 +143,8 @@ td {
     padding: 1rem;
   }
 
-  .name {
-    font-size: 1.5rem;
-  }
-
-  main{
-    display: block;
-  }
+  /* Ensure main remains a grid for two-column layout */
+  /* main { display: grid; } is already defined in base styles */
 }
 
 @media (min-width: 1100px) {
@@ -164,12 +159,9 @@ td {
   }
 }
 
-
-button:hover{
+button:hover {
   color: #73ff00;
   background-color: black;
-  border:3px solid #73ff00;
+  border: 3px solid #73ff00;
   box-shadow: 0 0 10px #73ff00;
 }
-
-
