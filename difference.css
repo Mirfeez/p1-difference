@@ -5,7 +5,7 @@
   --max-width: 1000px;
 }
 
-/* Mobile-first base */
+
 * {
   box-sizing: border-box;
 }
@@ -94,7 +94,7 @@ input[type="datetime-local"] {
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
   width: 100%;
-  font-size: 1rem; /* Ensure font size scales */
+  font-size: 1rem;
 }
 
 .enter {
@@ -105,7 +105,7 @@ input[type="datetime-local"] {
   border: 3px solid #73ff00;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem; /* Ensure font size scales */
+  font-size: 1rem;
   margin-top: 0.5rem;
 }
 
@@ -124,7 +124,7 @@ table {
   border-collapse: collapse;
   text-align: center;
   margin: 0.5rem 0;
-  font-size: 0.85rem; /* Slightly smaller base font size for tables */
+  font-size: 0.85rem; 
 }
 
 th,
@@ -133,7 +133,7 @@ td {
   padding: 0.5rem 0.6rem;
 }
 
-/* Stacked table layout for very small screens */
+
 @media (max-width: 600px) {
   table, thead, tbody, th, td, tr {
 		display: block;
@@ -143,8 +143,10 @@ td {
 		top: -9999px;
 		left: -9999px;
 	}
-/* larger screens */
+}
+
 @media (min-width: 700px) {
+  
   main {
     grid-template-columns: 1fr 1fr;
     align-items: start;
@@ -155,8 +157,6 @@ td {
     padding: 1rem;
   }
 
-  /* Ensure main remains a grid for two-column layout */
-  /* main { display: grid; } is already defined in base styles */
 }
 
 @media (min-width: 1100px) {
